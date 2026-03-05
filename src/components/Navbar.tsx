@@ -59,7 +59,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden lg:flex items-center space-x-10">
+                <div className="hidden xl:flex items-center space-x-10">
                     {navLinks.map((link) => (
                         <div
                             key={link.key}
@@ -94,7 +94,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Right Actions */}
-                <div className="hidden lg:flex items-center space-x-6">
+                <div className="hidden xl:flex items-center space-x-6">
                     {/* Language Switcher */}
                     <div
                         className="relative group"
@@ -130,9 +130,9 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                {/* Mobile Toggle */}
+                {/* Tablet/Mobile Toggle */}
                 <button
-                    className="lg:hidden text-white p-2"
+                    className="xl:hidden text-white p-2"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -141,7 +141,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="lg:hidden absolute top-full left-0 w-full bg-navy border-t border-white/10 p-6 flex flex-col space-y-4 animate-in slide-in-from-top duration-300 shadow-xl">
+                <div className="xl:hidden absolute top-full left-0 w-full bg-navy border-t border-white/10 p-6 flex flex-col space-y-4 animate-in slide-in-from-top duration-300 shadow-xl">
                     {navLinks.map((link) => (
                         <div key={link.key}>
                             <button
