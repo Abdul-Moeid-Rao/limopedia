@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -79,13 +80,8 @@ export default function BaseHero({
                     )}
                     
                     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white leading-tight mb-6 md:mb-8 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 px-2 md:px-0">
-                        {typeof title === 'string' && title.includes('<br>') ? (
-                            title.split('<br>').map((line, index) => (
-                                <React.Fragment key={index}>
-                                    {line}
-                                    {index < title.split('<br>').length - 1 && <br />}
-                                </React.Fragment>
-                            ))
+                        {typeof title === 'string' && title.includes('<span') ? (
+                            <div dangerouslySetInnerHTML={{ __html: t(title.replace(/<span class='text-gold italic'>(.*?)<\/span>/, (match, p1) => `<span class="text-gold italic">${t(p1)}</span>`)) }} />
                         ) : (
                             <span data-i18n={title}>{t(title)}</span>
                         )}

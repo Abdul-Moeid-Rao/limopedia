@@ -8,7 +8,7 @@ export default function AboutHero() {
 
     return (
         <BaseHero
-            title="aboutHeroTitleLine1<br><span class='text-gold italic'>aboutHeroTitleLine2</span>"
+            title="aboutHeroTitleLine1 <span class='text-gold italic'>aboutHeroTitleLine2</span>"
             subtitle="aboutHeroSubtitle"
             description="aboutHeroDesc"
             backgroundImage="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80"
